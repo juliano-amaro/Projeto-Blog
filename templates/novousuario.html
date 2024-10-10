@@ -1,0 +1,24 @@
+{% extends 'modelo.html' %}
+{% block conteudo %}
+
+<div id="novousuario">
+    <form action="/cadastro_usuario" method="post">
+        <h2>Cadastro de novos usuários</h2>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" maxlength="100" required>
+
+        <label for="E-mal:">E-mail:</label>
+        <input type="email" name="email" maxlength="100" required>
+        
+        {% if msgerro %}
+            <p style="background-color: red; text-align: center;" >{{ msgerro }}</p>
+        {% endif %}
+
+        <label for="senha">Senha:</label>
+        <input type="text" name="senha" required>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</div>
+
+{% endblock %}

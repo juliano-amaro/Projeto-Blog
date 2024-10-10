@@ -1,0 +1,26 @@
+{% extends 'modelo.html' %}
+{% block conteudo %}
+
+<div id="login">
+
+    <form action="/acesso" method="post">
+        <h2>Login</h2>
+        <div class="form-email">
+            <label>E-mail</label>
+            <input type="email" name="email" id="email" placeholder="nome@domínio.com" required>
+        </div>
+        <div class="form-senha">
+            <label>Senha</label>
+            <input type="password" name="senha" id="senha" required>
+        </div>
+
+        {% if mensagem %}
+         <p class="mserro">{{ mensage }}</p>
+        {% endif %}
+
+        <button type="submit">Acessar</button>
+    </form>
+
+</div>
+
+{% endblock %}

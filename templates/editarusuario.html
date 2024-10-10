@@ -1,0 +1,21 @@
+{% extends 'modelo.html' %}
+{% block conteudo %}
+
+<div id="novousuario">
+
+    <form action="/atualizar_usuario" method="post">
+        <h2>Editar cadastro de usuário</h2>
+
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" maxlength="100" required value="{{usuario[1]}}">
+        <label for="emal">E-mail</label>
+        <input type="email" name="email" maxlength="100" required value="{{usuario[2]}}">
+        <label for="senha">Senha:</label>
+        <input type="text" name="senha" required value="{{usuario[3]}}">
+
+        <button type="submit">Atualizar</button>
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'modelo.html' %}
+{% block conteudo %}
+
+<nav id="menu">
+    <h2>Área administrativa - ADM</h2>
+    <a href="/logout"><button class="button">Sair</button></a>
+</nav>
+
+<div id="adm">
+    <div id="adm-users">
+        <h2>Lista de usuários do Blog</h2>
+        <a href="/novousuario"><button class="bt_novousuario">Novo usuário</button></a>
+        <table>
+            <thead>
+                <tr>
+                    <th>NOME</th>
+                    <th>E-MAIL</th>
+                    <th>OPÇÕES</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if not lista_usuarios %}
+                    <tr><td colspan="3">Não há usuários cadastrados!</td></tr>
+                {% else %}
+                {% for usuario in lista_usuarios %}
+                    <tr>
+                        <td>{{ usuario[1] }}</td>
+                        <td>{{ usuario[2] }}</td>
+                        <td>
+                            <a href="/editar-user/{{usuario[0]}}">Editar</a>
+                            <a href="/excluir-user/{{usuario[0]}} " onclick="return confirm('Tem certeza que deseja excluir este usuário?')">Excluir</a>
+                        </td>
+                    </tr>
+                {%endfor%}
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+    <div id="adm-posts">
+        <h2>Moderação dos Posts</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>USUÁRIO</th>
+                    <th>POST</th>
+                    <th>DATA</th>
+                    <th>AÇÃO</th>
+                </tr>
+            </thead>
+            <TBody>
+                {% if not lista_usuarios %}
+                    <tr><td>Não há postagens no Blog</td></tr>
+                {% else %}
+                {% for post in lista_posts %}
+                    <tr>
+                        <td>{{post[4]}}</td>
+                        <td>{{post[2]}}</td>
+                        <td>{{post[3]}}</td>
+                        <td>
+                            <a href="/excluir-post/{{post[0]}}" onclick="return confirm('Tem certeza que deseja excluir este post?')">Excluir</a>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+                {% endif %}
+            </TBody>
+
+        </table>
+    </div>
+</div>
+
+{% endblock %}

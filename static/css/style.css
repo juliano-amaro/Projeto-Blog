@@ -1,0 +1,404 @@
+/* Arquivo CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 10vh;
+    background-color: #181f11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    color: #18fc04;
+}
+
+main {
+    flex: 1;
+    height: 80vh;
+    min-height: 80vh;
+}
+
+footer {
+    height: 10vh;
+    background-color: #181f11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #18fc04;
+}
+
+/* HOME */
+
+#home {
+    min-height: 70vh;
+    padding: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.post-container {
+    width: 300px;
+    min-height: 200px;
+    background-color: #ede8ff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 9px gray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+.post-autor {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.post-conteudo {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.post-data {
+    font-size: 14px;
+    margin-top: 14px;
+}
+
+.post-apagar {
+    display: flex;
+    justify-content: end;
+}
+
+/* FORMATAÇÃO PARA SMARTPHONE */
+
+@media (max-width: 600px) {
+    header {
+        height: 15vh;
+        font-size: 20px;
+    }
+
+    .post-container {
+        width: 90%;
+    }
+}
+
+/* LOGIN */
+
+#login {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#login form {
+    width: 30%;
+    min-width: 350px;
+    height: 500px;
+    color: #fff;
+    background-color: #181f11;
+    box-shadow: 5px 5px 10px gray;
+    border: 2px solid #18fc04;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    border: 10px solid #18fc04;
+}
+
+#login form h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#login form label {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#login form #email, #login form #senha {
+    width: 280px;
+    height: 50px;
+    resize: none;
+    border: 1px solid #18fc04;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: Arial;
+    font-size: 18px;
+}
+
+#login form button {
+    width: 90%;
+    height: 40px;
+    background-color: #18fc04;
+    border: none;
+    color: #181f11;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 auto; 
+}
+
+#login form button:hover {
+    background-color: #fff;
+    color: #181f11;
+    transition: 200ms;
+    border: 2px solid #18fc04;
+}
+
+/* NOVOPOST */
+
+#novopost {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#novopost form {
+    width: 30%;
+    height: 500px;
+    background-color: #18fc04;
+    color: #181f11;
+    box-shadow: 5px 5px 10px gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#novopost form label {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#novopost form textarea {
+    width: 90%;
+    height: 120px;
+    resize: none;
+    border: 2px solid #18fc04;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: Arial;
+    font-size: 18px;
+}
+
+#novopost form button {
+    width: 90%;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    color: #18fc04;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#novopost form button:hover {
+    background-color: #181f11;
+    color: #fff;
+    transition: 200ms;
+    border: 2px solid #fff;
+}
+
+/* MENU */
+
+#menu {
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#menu .button {
+    width: 100px;
+    height: 30px;
+    background-color: #18fc04;
+    color: #181f11;
+    border: none;
+    cursor: pointer;
+}
+
+#menu .button:hover {
+    text-decoration: underline;
+    border: 2px solid black;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        height: 15vh;
+        font-size: 20px;
+    }
+    
+    .post-container {
+        width: 90%;
+    }
+
+    #novopost {
+        height: 20vh;
+    }
+
+    #novopost form {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #novopost form textarea {
+        width: 95%;
+    }
+}
+
+/* Erro 404 - Not found */
+
+#erro404 {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    padding: 20px;
+}
+
+/* PÁGINA ADM-USER */
+
+#adm {
+
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+
+}
+
+#adm-users {
+    width: 50%;
+    min-height: 75vh;
+    padding: 20px;
+
+}
+
+#adm-users table {
+    width: 100%;
+}
+
+#adm-users table, td, th {
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+adm-users button {
+    padding: 5px 30px;
+    height: 30px;
+    margin: 20px 0;
+    border-radius: 20px;
+    border: none;
+    background-color: #006400;
+    color: #fff;
+}
+
+#adm-users button:hover {
+    background-color: #3da43d;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ADM-POSTS */
+
+#adm-posts {
+    width: 50%;
+    min-height: 75vh;
+    padding: 20px;
+}
+
+#adm-posts table {
+    width: 100%;
+}
+
+#adm-posts table, td, th {
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+/* NOVO USUARIO - ADM */
+
+#novousuario {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+}
+
+#novousuario form {
+    width: 30%;
+    background-color: #181f11;
+    height: 70vh;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    color: #18fc04;
+}
+
+#novousuario form input {
+    margin: 10px 0;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#novousuario button {
+    padding: 5px 30px;
+    height: 30px;
+    margin: 20px 0;
+    border-radius: 20px;
+    border: none;
+    background-color: #fff;
+    color: #181f11;
+}
+
+#novousuario button:hover {
+    background-color: #3da43d;
+    cursor: pointer;
+}
+

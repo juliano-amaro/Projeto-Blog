@@ -1,0 +1,13 @@
+{% extends 'modelo.html' %}
+{% block conteudo %}
+
+<div id="novopost">
+    <form action="/cadastro_post" method="post">
+        <label>Oi {{ usuario[1] }}<br>O que você que postar?</label>
+        <input type="hidden" value="{{usuario[0]}}" name="id_usuario">
+        <textarea name="conteudo"></textarea>
+        <button type="submit">Postar</button>
+    </form>
+</div>
+
+{% endblock %}

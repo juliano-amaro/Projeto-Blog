@@ -1,0 +1,47 @@
+{% extends 'modelo.html' %}
+{% block conteudo %}
+
+<nav id="menu">
+    {% if login %}
+
+            <a href="/novopost"><button class="button">Novo Post</button></a>
+            <a href="/logout"><button class="button">Sair</button></a>
+    {% else %}
+        <a href="/login"><button class="button">Faça Login</button></a> 
+    {% endif %}
+</nav>
+
+<div id="home">
+
+    {% if not posts %}
+        <h2>Não há postagens no blog!</h2>
+    {% else %}
+
+    {% for post in posts %}
+    <div class="post-container">
+
+        <p class="post-autor">{{ post.autor }} disse...</p>
+        <p class="post-conteudo">{{ post.conteudo }}</p>
+        <p class="post-data">{{ post.data }}</p>
+
+        {% if id_usuario == post.id_usuario %}
+
+            <p class="post-apagar">
+                <a href="/excluir-post/{{post.id_post}}" onclick="return confirm('Tem certeza que deseja excluir este post?')">Apagar</a>
+            </p>
+
+        {% endif %}
+    </div>
+    {% endfor %}
+
+    {% endif %}
+</div>
+
+<script>
+    setInterval(function(){
+        location.reload()
+    }, 10000);
+
+</script>
+
+{% endblock %}
